@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+
+    <string name="question_text">Placeholder for now...</string>
+    <string name="question_text1">Ichigo, from Bleach, dyed his hair.</string>
+    <string name="question_text2">Ichigos mom died of natural causes.</string>
+    <string name="question_text3">Ichigo can see ghosts</string>
+    <string name="question_text4">Ichigos dad is a regular human</string>
+    <string name="question_text5">Ichigo is the middle child</string>
+
+    <string name="true_button">True</string>
+    <string name="false_button">False</string>
+
+    <string name="correct_toast">Correct!</string>
+    <string name="incorrect_toast">Incorrect!</string>
+</resources>
