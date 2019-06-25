@@ -2,15 +2,28 @@
     <string name="app_name">QuizApp</string>
 
     <string name="question_text">Placeholder for now...</string>
-    <string name="question_text1">Ichigo, from Bleach, dyed his hair.</string>
-    <string name="question_text2">Ichigos mom died of natural causes.</string>
-    <string name="question_text3">Ichigo can see ghosts</string>
-    <string name="question_text4">Ichigos dad is a regular human</string>
-    <string name="question_text5">Ichigo is the middle child</string>
+    <string name="question_1">Ichigo, from Bleach, dyed his hair.</string>
+    <string name="question_2">Ichigo\'s mom died of natural causes.</string>
+    <string name="question_3">Ichigo can see ghosts</string>
+    <string name="question_4">Ichigos dad is a regular human</string>
+    <string name="question_5">Ichigo is the oldest child</string>
+
+    <string name="question_1_hint">He gets mad when they ask him this</string>
+    <string name="question_2_hint">Only some people know how she died</string>
+    <string name="question_3_hint">He is a Soul Reaper</string>
+    <string name="question_4_hint">Soul Reaper powers are genetic</string>
+    <string name="question_5_hint">He has two sisters</string>
 
     <string name="true_button">True</string>
     <string name="false_button">False</string>
+    <string name="next_button">Next</string>
+    <string name="prev_button">Prev</string>
+    <string name="hint_button">Hint</string>
+    <string name="restart_button">Restart</string>
 
     <string name="correct_toast">Correct!</string>
     <string name="incorrect_toast">Incorrect!</string>
+
+    <string name="score">Score: </string>
+
 </resources>
