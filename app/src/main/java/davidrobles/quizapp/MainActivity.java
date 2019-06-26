@@ -15,6 +15,7 @@ public class  MainActivity extends AppCompatActivity implements View.OnClickList
 
     private TextView mTextView;
     private TextView mScoreText;
+    private String mOgScoreText;
 
     private Button mTrueButton;
     private Button mFalseButton;
@@ -64,7 +65,11 @@ public class  MainActivity extends AppCompatActivity implements View.OnClickList
         mQuestions[3] = new Question(R.string.question_4, R.string.question_4_hint, false);
         mQuestions[4] = new Question(R.string.question_5, R.string.question_5_hint, true);
 
+        mOgScoreText = "Score: " ;
+
         mTextView.setText(mQuestions[mIndex].getTextResId());
+        mScoreText.setText(mOgScoreText);
+
     }
 
     @Override
@@ -131,10 +136,12 @@ public class  MainActivity extends AppCompatActivity implements View.OnClickList
             if(mIndex < mQuestions.length)
             {
                 mTextView.setText(mQuestions[mIndex].getTextResId());
+                mScoreText.setText(mOgScoreText + mScore);
             }
             else
             {
-                mTextView.setText("You are done!");
+                mTextView.setText("You are done! Your Score Was " + mScore);
+                mScoreText.setText(mOgScoreText + mScore);
                 mRestartButton.setVisibility(View.VISIBLE);
                 mTrueButton.setVisibility(View.GONE);
                 mFalseButton.setVisibility(View.GONE);
@@ -144,14 +151,28 @@ public class  MainActivity extends AppCompatActivity implements View.OnClickList
             }
             //DO IF STATEMENT HERE:
         }
+        else if(view.getId() == R.id.restart_button)
+        {
+            mIndex = 0;
+            mHintIndex = 1;
+            mScore = 0;
+            mTextView.setText(mQuestions[mIndex].getTextResId());
+            mScoreText.setText(mOgScoreText);
+            mRestartButton.setVisibility(View.GONE);
+            mTrueButton.setVisibility(View.VISIBLE);
+            mFalseButton.setVisibility(View.VISIBLE);
+            mPrevButton.setVisibility(View.GONE);
+            mNextButton.setVisibility(View.VISIBLE);
+            mHintButton.setVisibility(View.VISIBLE);
+
+        }
     }
 
     public boolean checkAnswer(boolean userInput)
     {
         if(mQuestions[mIndex].getAnswer() == userInput)
         {
-//            mScore += 50;
-//            mScoreText.setText(R.string.score + mScore);
+            mScore += 50;
             Toast myToast = Toast.makeText(this, "You are correct", Toast.LENGTH_SHORT);
             myToast.setGravity(Gravity.TOP | Gravity.LEFT, 325, 150);
             myToast.show();
