@@ -86,31 +86,8 @@ public class  MainActivity extends AppCompatActivity implements View.OnClickList
         }
         else if(view.getId() == R.id.hint_button)
         {
-            if(mHintIndex == 1)
-            {
-                Toast hintToast = Toast.makeText(this, R.string.question_1_hint, Toast.LENGTH_LONG);
-                hintToast.show();
-            }
-            if(mHintIndex == 2)
-            {
-                Toast hintToast = Toast.makeText(this, R.string.question_2_hint, Toast.LENGTH_LONG);
-                hintToast.show();
-            }
-            if(mHintIndex == 3)
-            {
-                Toast hintToast = Toast.makeText(this, R.string.question_3_hint, Toast.LENGTH_LONG);
-                hintToast.show();
-            }
-            if(mHintIndex == 4)
-            {
-                Toast hintToast = Toast.makeText(this, R.string.question_4_hint, Toast.LENGTH_LONG);
-                hintToast.show();
-            }
-            if(mHintIndex == 5)
-            {
-                Toast hintToast = Toast.makeText(this, R.string.question_5_hint, Toast.LENGTH_LONG);
-                hintToast.show();
-            }
+            Toast hintToast = Toast.makeText(this,mQuestions[mIndex].getHintTextResId(), Toast.LENGTH_LONG);
+            hintToast.show();
 
         }
         else if(view.getId() == R.id.prev_button)

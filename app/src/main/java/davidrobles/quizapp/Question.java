@@ -27,7 +27,8 @@ public class Question
         return mHintTextResId;
     }
 
-    public void setHintTextResId(int hintTextResId) {
+    public void setHintTextResId(int hintTextResId)
+    {
         mHintTextResId = hintTextResId;
     }
 
